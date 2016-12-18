@@ -9,7 +9,29 @@
 /// 
 /// In contract terminology the Factile is the sender or seller. The DDWFT is the buyer or recipient.
 /// 
+/// The final version may well be architected according to Swarm / Whisper protocols but for the purposes of the hackerthon
+/// this FTC is being coded in Solidity
+/// 
 /// Change Control Notes
 /// Author	Date 		Version 	Reason For Change
 /// JBC		18/12/2016  0.1 		Original
+///
+/// Begin
+contract FTC_userID {	
+	mapping (address => uString) PrChainID;
+	function PrChainID {
+		iDInform[msg.sender] = true;
+	}
+	function sendFTC(address receiver, uString amount) returns(bool sufficient) {
+		if (idInform[msg.sender] <> true) 
+			idInform[msg.sender] FTC_logFalse;
+			idInform[receiver] DDWFT_logFalse;
+		return false;
+	else
+		return true;
+	}
+}
+
+
+/// End
 
