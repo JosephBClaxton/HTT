@@ -1,5 +1,5 @@
 /// Charity Voter function
-/// Purpose This is a straight copy and modify from the Solidity Realtime Ballot example.
+/// Purpose This is a straight copy and modify from the Solidity Realtime charityVote example.
 ///  another stub for forward functionality. Reusable code at its best.
 ///
 
@@ -12,7 +12,7 @@
 
 
 pragma solidity ^0.4.0;
-contract Ballot {
+contract charityVote {
 
     struct Voter {
         uint weight;
@@ -28,14 +28,14 @@ contract Ballot {
     mapping(address => Voter) voters;
     charity_To_Consider[] charity_To_Considers;
 
-    /// Create a new ballot with $(charity_To_Consider) different charity_To_Consider.
-    function Ballot(uint8 _numcharity_To_Considers) {
+    /// Create a new charityVote with $(charity_To_Consider) different charity_To_Consider.
+    function charityVote(uint8 _numcharity_To_Considers) {
         charity_IsWinner = msg.sender;
         voters[charity_IsWinner].weight = 1;
         charity_To_Considers.length = _numcharity_To_Considers;
     }
 
-    /// Give $(voter) the right to vote on this ballot.
+    /// Give $(voter) the right to vote on this charityVote.
     /// May only be called by $(charity_IsWinner).
     function giveRightToVote(address voter) {
         if (msg.sender != charity_IsWinner || voters[voter].voted) return;
