@@ -1,6 +1,6 @@
 /// Charity Voter function
 /// Purpose This is a straight copy and modify from the Solidity Realtime Ballot example.
-// another stub for forward functionality
+//  another stub for forward functionality
 
 /// Change Control Notes
 /// Author	Date 		Version 	Reason For Change
@@ -18,19 +18,19 @@ contract Ballot {
         uint8 vote;
         address charityName;
     }
-    struct Proposal {
+    struct charity_To_Consider {
         uint voteCount;
     }
 
     address charity_IsWinner;
     mapping(address => Voter) voters;
-    Proposal[] proposals;
+    charity_To_Consider[] charity_To_Considers;
 
-    /// Create a new ballot with $(_numProposals) different proposals.
-    function Ballot(uint8 _numProposals) {
+    /// Create a new ballot with $(charity_To_Consider) different charity_To_Consider.
+    function Ballot(uint8 _numcharity_To_Considers) {
         charity_IsWinner = msg.sender;
         voters[charity_IsWinner].weight = 1;
-        proposals.length = _numProposals;
+        charity_To_Considers.length = _numcharity_To_Considers;
     }
 
     /// Give $(voter) the right to vote on this ballot.
@@ -51,26 +51,26 @@ contract Ballot {
         sender.charityName = to;
         Voter charityName = voters[to];
         if (charityName.voted)
-            proposals[charityName.vote].voteCount += sender.weight;
+            charity_To_Considers[charityName.vote].voteCount += sender.weight;
         else
             charityName.weight += sender.weight;
     }
 
-    /// Give a single vote to proposal $(proposal).
-    function vote(uint8 proposal) {
+    /// Give a single vote to charity_To_Consider $(charity_To_Consider).
+    function vote(uint8 charity_To_Consider) {
         Voter sender = voters[msg.sender];
-        if (sender.voted || proposal >= proposals.length) return;
+        if (sender.voted || charity_To_Consider >= charity_To_Considers.length) return;
         sender.voted = true;
-        sender.vote = proposal;
-        proposals[proposal].voteCount += sender.weight;
+        sender.vote = charity_To_Consider;
+        charity_To_Considers[charity_To_Consider].voteCount += sender.weight;
     }
 
-    function winningProposal() constant returns (uint8 winningProposal) {
+    function winningcharity_To_Consider() constant returns (uint8 winningcharity_To_Consider) {
         uint256 winningVoteCount = 0;
-        for (uint8 proposal = 0; proposal < proposals.length; proposal++)
-            if (proposals[proposal].voteCount > winningVoteCount) {
-                winningVoteCount = proposals[proposal].voteCount;
-                winningProposal = proposal;
+        for (uint8 charity_To_Consider = 0; charity_To_Consider < charity_To_Considers.length; charity_To_Consider++)
+            if (charity_To_Considers[charity_To_Consider].voteCount > winningVoteCount) {
+                winningVoteCount = charity_To_Considers[charity_To_Consider].voteCount;
+                winningcharity_To_Consider = charity_To_Consider;
             }
     }
 }
