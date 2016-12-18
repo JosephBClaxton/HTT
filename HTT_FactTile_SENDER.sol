@@ -17,12 +17,13 @@
 /// JBC		18/12/2016  0.1 		Original
 ///
 /// Begin
+pragma solidity ^0.4.0;
 contract FTC_userID {	
 	mapping (address => uString) PrChainID;
 	function PrChainID {
 		iDInform[msg.sender] = true;
 	}
-	function sendFTC(address receiver, uString amount) returns(bool sufficient) {
+	function sendFTC(address receiver, uString prChainId) returns(bool sufficient) {
 		if (idInform[msg.sender] <> true) 
 			idInform[msg.sender] FTC_logFalse; /// This is an action
 			idInform[receiver]   instruct_OwnerPchain_logFalse; ///Initiate a FactTile / OwnerPrivate Chain Contract - both sender and private owner chain need to concur on what just happened.

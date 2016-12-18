@@ -10,7 +10,21 @@
 /// altruistic or profit minded users can earn from their own tiles and dispose of as they see fit.
 /// In contract terminology the DDWFT is the buyer or recipient and the Factile is the sender or seller. 
 /// 
+/// The final version may well be architected according to Swarm / Whisper protocols but for the purposes of the hackerthon
+/// this proto DDWFT is being coded in Solidity
+/// 
 /// Change Control Notes
 /// Author	Date 		Version 	Reason For Change
 /// JBC		18/12/2016  0.1 		Original
+/// Begin
+pragma solidity ^0.4.0;
+
+
+
+
+
+
+
+
+/// End
 
