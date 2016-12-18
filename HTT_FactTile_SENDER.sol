@@ -24,10 +24,16 @@ contract FTC_userID {
 	}
 	function sendFTC(address receiver, uString amount) returns(bool sufficient) {
 		if (idInform[msg.sender] <> true) 
-			idInform[msg.sender] FTC_logFalse;
-			idInform[receiver] DDWFT_logFalse;
+			idInform[msg.sender] FTC_logFalse; /// This is an action
+			idInform[receiver]   instruct_OwnerPchain_logFalse; ///Initiate a FactTile / OwnerPrivate Chain Contract - both sender and private owner chain need to concur on what just happened.
+														  /// because it the PrivateChain needs to know the status of a send to the public DW
 		return false;
 	else
+			idInform[receiver]   instruct_OwnerPchain_logtrue;  //This is an instruction (both sender and private owner chain need to concur on what just happened.
+			idInform[msg.sender] FTC_Bank_1_TokenBit; ///Initiate a FactTile / OwnerPrivate Chain Contract - both sender and private owner chain need to concur on what just happened.
+														  /// because it the PrivateChain needs to know the status of a send to the public DW
+			idInform[msg.sender] FTC_logFalse; /// This is an action
+	
 		return true;
 	}
 }
