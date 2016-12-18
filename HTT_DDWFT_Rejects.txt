@@ -1,0 +1,55 @@
+/// HTT Hackerthon Draft Rejects (DDWFT)
+/// DDWFT rejects a contract.
+/// The final version may well be architected according to Swarm / Whisper protocols but for the purposes of the hackerthon
+/// this proto DDWFT is being coded in Solidity
+/// 
+/// This could simply be a function in the Receiver Script. However,for now at least 
+/// I'm creating this stub so I can work independently on reject methods.
+///
+/// Change Control Notes
+/// Author	Date 		Version 	Reason For Change
+/// JBC		18/12/2016  0.1 		Original
+pragma solidity ^0.4.0;
+contract DDWFT_Consolidate {
+
+    struct FTC {
+        address prChainID;
+    }
+    address FTCstorage;
+    mapping(address => prChainID) StoreFTC;
+    
+    struct ValidBool {
+        bool IsValid = false; /// default to false
+    }
+
+    ///
+    function ValidateAddr(FTC) {
+        if (msg.sender != FTCstorage || DWC_logFalse) 
+            ValidBool(false);
+            (msg.sender Reject(ValidBool =true) ///signal DDWFT rejects
+            return false;
+        else
+        /// Do work
+        AddFTC_2DWChain(true) = 1;
+        ValidBool(true);
+        return true;
+        
+    }
+
+    /// 
+    function AddFTC_2DWChain(FTC) {
+
+
+    }
+
+    ///
+    function FTC_WithGift(FTC, FTCGifType) {
+    /// TheGiftBank function is no more than a stub just now.
+    /// And its all the seed idea for a cinsumer exchage with HTTC
+    /// GiftTypes
+    /// a. xChange_Trade_type - trading tokens amonsgts HTT consumers
+    /// b. chrIty -  a gift to charity (Which charity is an agreed Consensus which by Voter protocol)
+    /// c. IsDonorRanD -- a donation to HTT R&D
+    /// d. cCusVchr - Customer_GiftVoucher
+    AddToDW_Bank(FTC_Source, FTCGifType)
+    return;

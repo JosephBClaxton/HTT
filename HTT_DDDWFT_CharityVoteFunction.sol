@@ -1,12 +1,14 @@
 /// Charity Voter function
 /// Purpose This is a straight copy and modify from the Solidity Realtime Ballot example.
-//  another stub for forward functionality
+///  another stub for forward functionality. Reusable code at its best.
+///
 
 /// Change Control Notes
 /// Author	Date 		Version 	Reason For Change
 /// JBC		18/12/2016  0.1 		Original
 
-pragma solidity ^0.4.0;
+/// The final version may well be architected according to Swarm / Whisper protocols but for the purposes of the hackerthon
+/// this proto DDWFT is being coded in Solidity
 
 
 pragma solidity ^0.4.0;
